@@ -1,6 +1,4 @@
-// import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, View } from "react-native";
 import { useFonts } from "expo-font";
 import { AppLoading } from "expo";
 import Home from "./app/screens/Home";
@@ -14,17 +12,6 @@ export default function App() {
   if (!fontLoaded) {
     return <AppLoading />;
   } else {
-    return (
-      <View>
-        <Home />
-      </View>
-    );
+    return <Home />;
   }
 }
-
-const styles = StyleSheet.create({
-  // container: {
-  //   // flex: 1,
-  //   backgroundColor: "#fff",
-  // },
-});
