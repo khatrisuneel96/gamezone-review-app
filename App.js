@@ -1,18 +1,25 @@
 // import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
+import { useFonts } from "expo-font";
+import { AppLoading } from "expo";
 import Home from "./app/screens/Home";
-import Reviews from "./app/screens/Reviews";
-import About from "./app/screens/About";
 
 export default function App() {
-  return (
-    <View>
-      <Home />
-      <Reviews />
-      <About />
-    </View>
-  );
+  let [fontLoaded] = useFonts({
+    "Century-Gothic-Regular": require("./app/assets/fonts/Century-Gothic-Regular.ttf"),
+    "Century-Gothic-Bold": require("./app/assets/fonts/Century-Gothic-Bold.ttf"),
+  });
+
+  if (!fontLoaded) {
+    return <AppLoading />;
+  } else {
+    return (
+      <View>
+        <Home />
+      </View>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
