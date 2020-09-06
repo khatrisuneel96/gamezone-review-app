@@ -5,7 +5,7 @@ export const globalStyles = StyleSheet.create({
     flex: 1,
     padding: 20,
   },
-  textItem: {
+  itemTitle: {
     fontFamily: "Century-Gothic-Bold",
     fontSize: 20,
     color: "#333",
