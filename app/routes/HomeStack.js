@@ -11,6 +11,7 @@ const HomeStack = () => {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Review Details" component={Reviews} />
       </Stack.Navigator>
     </NavigationContainer>
   );

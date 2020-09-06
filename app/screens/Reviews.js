@@ -5,7 +5,7 @@ import { globalStyles } from "../assets/styles/Global";
 export default function Reviews() {
   return (
     <View style={globalStyles.container}>
-      <Text>Review</Text>
+      <Text style={globalStyles.textItem}>Review</Text>
     </View>
   );
 }
