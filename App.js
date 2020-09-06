@@ -2,6 +2,7 @@ import React from "react";
 import { useFonts } from "expo-font";
 import { AppLoading } from "expo";
 import Home from "./app/screens/Home";
+import HomeStack from "./app/routes/HomeStack";
 
 export default function App() {
   let [fontLoaded] = useFonts({
@@ -12,6 +13,6 @@ export default function App() {
   if (!fontLoaded) {
     return <AppLoading />;
   } else {
-    return <Home />;
+    return <HomeStack />;
   }
 }
