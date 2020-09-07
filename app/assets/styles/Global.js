@@ -34,6 +34,16 @@ export const globalStyles = StyleSheet.create({
     fontFamily: "Century-Gothic-Bold",
     textTransform: "capitalize",
   },
+  empty: {
+    fontFamily: "Century-Gothic-Regular",
+    fontSize: 20,
+    marginVertical: 50,
+    textAlign: "center",
+  },
+  reviewDetailTitle: {
+    fontFamily: "Century-Gothic-Bold",
+    fontSize: 18,
+  },
 });
 
 export const images = {

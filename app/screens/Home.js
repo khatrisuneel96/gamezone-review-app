@@ -17,11 +17,7 @@ import ReviewForm from "./ReviewForm";
 export default function Home({ navigation }) {
   const [modelOpen, setModalOpen] = useState(false);
 
-  const [reviews, setReviews] = useState([
-    { title: "Review1", body: "Review Detail", rating: 5, key: 1 },
-    { title: "Review2", body: "Review Detail", rating: 4, key: 2 },
-    { title: "Review3", body: "Review Detail", rating: 3, key: 3 },
-  ]);
+  const [reviews, setReviews] = useState([]);
 
   const addReview = (review) => {
     review.key = Math.random().toString();
@@ -51,6 +47,9 @@ export default function Home({ navigation }) {
           </View>
         </TouchableWithoutFeedback>
       </Modal>
+      {reviews.length === 0 && (
+        <Text style={globalStyles.empty}>No Reviews!</Text>
+      )}
       <FlatList
         data={reviews}
         renderItem={({ item }) => (
