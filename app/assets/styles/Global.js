@@ -31,7 +31,7 @@ export const globalStyles = StyleSheet.create({
     marginBottom: 10,
     color: "crimson",
     textAlign: "center",
-    fontFamily: "Century-Gothic-Regular",
+    fontFamily: "Century-Gothic-Bold",
     textTransform: "capitalize",
   },
 });
