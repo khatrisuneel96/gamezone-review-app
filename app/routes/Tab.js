@@ -26,7 +26,13 @@ const TabStack = () => {
             }
           },
         })}
-        tabBarOptions={{ inactiveTintColor: "gray" }}
+        tabBarOptions={{
+          inactiveTintColor: "gray",
+          labelStyle: {
+            fontFamily: "Century-Gothic-Regular",
+            fontSize: 15,
+          },
+        }}
       >
         <Tab.Screen name="Home" component={HomeStack} />
         <Tab.Screen name="About" component={AboutStack} />

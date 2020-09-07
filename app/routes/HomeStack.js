@@ -1,14 +1,13 @@
 import React from "react";
-// import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Home from "../screens/Home";
 import ReviewDetails from "../screens/ReviewDetails";
+import Header from "../shared/Header";
 
 const Stack = createStackNavigator();
 
 const HomeStack = () => {
   return (
-    // <NavigationContainer>
     <Stack.Navigator
       screenOptions={{
         headerStyle: {
@@ -21,7 +20,7 @@ const HomeStack = () => {
         name="Home"
         component={Home}
         options={{
-          title: "GameZone",
+          headerTitle: () => <Header title="GameZone" />,
         }}
       />
       <Stack.Screen
@@ -30,7 +29,6 @@ const HomeStack = () => {
         options={{ title: "Review Details" }}
       />
     </Stack.Navigator>
-    // </NavigationContainer>
   );
 };
 
