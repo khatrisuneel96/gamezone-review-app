@@ -1,12 +1,11 @@
 import React from "react";
 // import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import Home from "../screens/Home";
-import ReviewDetails from "../screens/ReviewDetails";
+import About from "../screens/About";
 
 const Stack = createStackNavigator();
 
-const HomeStack = () => {
+const AboutStack = () => {
   return (
     // <NavigationContainer>
     <Stack.Navigator
@@ -18,20 +17,15 @@ const HomeStack = () => {
       }}
     >
       <Stack.Screen
-        name="Home"
-        component={Home}
+        name="About"
+        component={About}
         options={{
-          title: "GameZone",
+          title: "About GameZone",
         }}
-      />
-      <Stack.Screen
-        name="ReviewDetails"
-        component={ReviewDetails}
-        options={{ title: "Review Details" }}
       />
     </Stack.Navigator>
     // </NavigationContainer>
   );
 };
 
-export default HomeStack;
+export default AboutStack;
