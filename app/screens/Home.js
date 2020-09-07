@@ -1,9 +1,19 @@
 import React, { useState } from "react";
-import { Text, View, FlatList, TouchableOpacity } from "react-native";
+import {
+  Text,
+  View,
+  FlatList,
+  TouchableOpacity,
+  Modal,
+  StyleSheet,
+} from "react-native";
+import { Ionicons } from "@expo/vector-icons";
 import { globalStyles } from "../assets/styles/Global";
 import Card from "../shared/Card";
 
 export default function Home({ navigation }) {
+  const [modelOpen, setModalOpen] = useState(false);
+
   const [reviews, setReviews] = useState([
     { title: "Review1", body: "Review Detail", rating: 5, key: 1 },
     { title: "Review2", body: "Review Detail", rating: 4, key: 2 },
@@ -12,6 +22,24 @@ export default function Home({ navigation }) {
 
   return (
     <View style={globalStyles.container}>
+      <Ionicons
+        name="md-add"
+        size={25}
+        style={styles.modalToggle}
+        onPress={() => setModalOpen(true)}
+      />
+
+      <Modal visible={modelOpen} animated="slice">
+        <View>
+          <Ionicons
+            name="ios-close"
+            size={25}
+            style={{ ...styles.modalClose, ...styles.modalToggle }}
+            onPress={() => setModalOpen(false)}
+          />
+          <Text style={styles.modalContent}>Hello MoFos!</Text>
+        </View>
+      </Modal>
       <FlatList
         data={reviews}
         renderItem={({ item }) => (
@@ -29,3 +57,21 @@ export default function Home({ navigation }) {
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  modalToggle: {
+    alignSelf: "center",
+    marginBottom: 10,
+    borderWidth: 1,
+    borderColor: "#bbb",
+    borderRadius: 10,
+    padding: 10,
+  },
+  modalClose: {
+    marginTop: 20,
+    marginBottom: 0,
+  },
+  modalContent: {
+    flex: 1,
+  },
+});
