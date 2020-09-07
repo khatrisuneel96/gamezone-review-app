@@ -26,6 +26,14 @@ export const globalStyles = StyleSheet.create({
     fontFamily: "Century-Gothic-Regular",
     marginVertical: 3,
   },
+  textError: {
+    marginTop: 6,
+    marginBottom: 10,
+    color: "crimson",
+    textAlign: "center",
+    fontFamily: "Century-Gothic-Regular",
+    textTransform: "capitalize",
+  },
 });
 
 export const images = {
