@@ -17,6 +17,14 @@ export const globalStyles = StyleSheet.create({
   font: {
     fontFamily: "Century-Gothic-Regular",
   },
+  input: {
+    borderWidth: 1,
+    padding: 10,
+    borderRadius: 10,
+    borderColor: "#ddd",
+    fontSize: 20,
+    fontFamily: "Century-Gothic-Regular",
+  },
 });
 
 export const images = {

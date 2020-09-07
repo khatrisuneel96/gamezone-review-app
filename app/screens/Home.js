@@ -10,6 +10,7 @@ import {
 import { Ionicons } from "@expo/vector-icons";
 import { globalStyles } from "../assets/styles/Global";
 import Card from "../shared/Card";
+import ReviewForm from "./ReviewForm";
 
 export default function Home({ navigation }) {
   const [modelOpen, setModalOpen] = useState(false);
@@ -30,14 +31,14 @@ export default function Home({ navigation }) {
       />
 
       <Modal visible={modelOpen} animated="slice">
-        <View>
+        <View style={styles.modalContent}>
           <Ionicons
             name="ios-close"
             size={25}
             style={{ ...styles.modalClose, ...styles.modalToggle }}
             onPress={() => setModalOpen(false)}
           />
-          <Text style={styles.modalContent}>Hello MoFos!</Text>
+          <ReviewForm />
         </View>
       </Modal>
       <FlatList
