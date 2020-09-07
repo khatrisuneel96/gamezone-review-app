@@ -24,6 +24,7 @@ export const globalStyles = StyleSheet.create({
     borderColor: "#ddd",
     fontSize: 20,
     fontFamily: "Century-Gothic-Regular",
+    marginVertical: 3,
   },
 });
 
