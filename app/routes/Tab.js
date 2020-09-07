@@ -12,14 +12,14 @@ const TabStack = () => {
     <NavigationContainer>
       <Tab.Navigator
         screenOptions={({ route }) => ({
-          tabBarIcon: ({ focused, size, color }) => {
+          tabBarIcon: ({ focused, color }) => {
             if (route.name === "Home") {
-              return <AntDesign name="home" size={size} color={color} />;
+              return <AntDesign name="home" size={25} color={color} />;
             } else if (route.name === "About") {
               return (
                 <AntDesign
                   name={focused ? "infocirlceo" : "infocirlce"}
-                  size={size}
+                  size={25}
                   color={color}
                 />
               );
